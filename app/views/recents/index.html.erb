@@ -1,0 +1,47 @@
+<h1>Listing recents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ride</th>
+      <th>Date</th>
+      <th>Route</th>
+      <th>Ride</th>
+      <th>Time</th>
+      <th>Distance</th>
+      <th>Average</th>
+      <th>Speed</th>
+      <th>Fastest</th>
+      <th>Speed</th>
+      <th>Notes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recents.each do |recent| %>
+      <tr>
+        <td><%= recent.ride %></td>
+        <td><%= recent.Date %></td>
+        <td><%= recent.route %></td>
+        <td><%= recent.ride %></td>
+        <td><%= recent.time %></td>
+        <td><%= recent.distance %></td>
+        <td><%= recent.average %></td>
+        <td><%= recent.speed %></td>
+        <td><%= recent.fastest %></td>
+        <td><%= recent.speed %></td>
+        <td><%= recent.notes %></td>
+        <td><%= link_to 'Show', recent %></td>
+        <td><%= link_to 'Edit', edit_recent_path(recent) %></td>
+        <td><%= link_to 'Destroy', recent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recent', new_recent_path %>

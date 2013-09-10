@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ride: MyString
+  Date: 2013-09-10
+  route: MyString
+  ride: MyString
+  time: MyString
+  distance: MyString
+  average: MyString
+  speed: MyString
+  fastest: MyString
+  speed: MyString
+  notes: MyText
+
+two:
+  ride: MyString
+  Date: 2013-09-10
+  route: MyString
+  ride: MyString
+  time: MyString
+  distance: MyString
+  average: MyString
+  speed: MyString
+  fastest: MyString
+  speed: MyString
+  notes: MyText
