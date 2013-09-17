@@ -1,4 +1,6 @@
 CycleTracker::Application.routes.draw do
+  resources :rides
+
   resources :recents
 
   # The priority is based upon order of creation: first created -> highest priority.
