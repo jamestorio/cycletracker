@@ -1,15 +1,30 @@
 <div class="page-header">
 	<h1>All Rides</h1>
 
+<div class="btn btn-primary">
+<%= link_to 'Add New Ride', new_recent_path %>
+</div>
+
 <% @recents.each do |recent| %>
 <div class="recents">
-	<strong>Date: <%= recent.Date %></strong>
-	<div>Distance: <%= recent.distance%></div>
-	<div class="meta"> 
-		<%= link_to 'Show Details', recent %>
+	<div class="date">Date: <%= recent.Date %> </div>
+	<div class="distance">Distance:<%=link_to recent.distance, recent%></div>
+    <div class="meta">
+		<span><%= recent.Date %></span>
+        <span><%= recent.route %><span>
+        <%= recent.time %>
+        <%= recent.distance %>
+        <%= recent.average %>
+        <%= recent.fastest %>
+        <%= recent.notes %>
+	
 	</div>
-
+	<span class="admin">
+		<%= link_to "Edit", edit_recent_path(recent) %> |
+		<%= link_to "Delete", recent, method: :delete, data: {confirm: "Are you sure you want to delete this entry?"}%>
+	</span>
 </div>
+
 <% end %>
 
 
@@ -51,4 +66,4 @@
 
 <br>
 
-<%= link_to 'New Recent', new_recent_path %>
+
