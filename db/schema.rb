@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130913200830) do
+ActiveRecord::Schema.define(version: 20130918185235) do
 
   create_table "recents", force: true do |t|
     t.string   "ride"
     t.date     "Date"
     t.string   "route"
-    t.string   "time"
-    t.string   "distance"
-    t.string   "average"
-    t.string   "speed"
-    t.string   "fastest"
+    t.integer  "time",       limit: 255
+    t.decimal  "distance"
+    t.decimal  "average"
+    t.decimal  "speed"
+    t.decimal  "fastest"
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
