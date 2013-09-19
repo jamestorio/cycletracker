@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TrackingMe</title>
+  <title>Health Tracker</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -12,13 +12,20 @@
 			<div class="container">
 				<a href="#" class="brand">Health Tracker</a>
 					<ul class="nav">
-					  <li> <%= link_to "All Rides", recents_path %></li>
+					<li><a href="#">Dash Board</a></li>
+					<li><a href="#">Biometric</a></li>
+					<li><a href="#">Weight Training</a></li>
+					<li><a href="#">Stairs</a></li>
+					<li> <%= link_to "Cycling", recents_path %></li>
+					<li><a href="#">Food</a></li>
 					</ul>
 			</div>
 	    </div>
 	</div>
 
 <div class="container">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 	<%= yield %>
 </div>
 
