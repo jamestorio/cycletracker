@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919151041) do
+ActiveRecord::Schema.define(version: 20130919174823) do
 
   create_table "recents", force: true do |t|
     t.string   "ride"
@@ -26,7 +26,10 @@ ActiveRecord::Schema.define(version: 20130919151041) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "name"
   end
+
+  add_index "recents", ["name"], name: "index_recents_on_name"
 
   create_table "rides", force: true do |t|
     t.string   "name"
