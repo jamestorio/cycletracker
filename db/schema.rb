@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919174823) do
+ActiveRecord::Schema.define(version: 20130921005956) do
 
   create_table "recents", force: true do |t|
     t.string   "ride"
@@ -38,6 +38,30 @@ ActiveRecord::Schema.define(version: 20130919174823) do
     t.datetime "updated_at"
   end
 
+  create_table "stairs", force: true do |t|
+    t.date     "Date"
+    t.decimal  "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "strength_trainings", force: true do |t|
+    t.integer  "push_up"
+    t.integer  "sit_up"
+    t.integer  "toe_raise"
+    t.integer  "squat"
+    t.integer  "leg_extension"
+    t.integer  "curl"
+    t.integer  "tricep_extension"
+    t.integer  "shoulder_extension"
+    t.integer  "lat_pulldown"
+    t.integer  "benchpress"
+    t.integer  "seated_row"
+    t.integer  "pec_fly"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -58,5 +82,23 @@ ActiveRecord::Schema.define(version: 20130919174823) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "weight_trainings", force: true do |t|
+    t.date     "date"
+    t.integer  "push_up"
+    t.integer  "sit_up"
+    t.integer  "toe_raise"
+    t.integer  "squat"
+    t.integer  "leg_extension"
+    t.integer  "curl"
+    t.integer  "tricep_exstension"
+    t.integer  "should_press"
+    t.integer  "lat_pulldown"
+    t.integer  "bench_press"
+    t.integer  "seated_row"
+    t.integer  "peck_fly"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pushup: 1
+  situp: 1
+  toe_raise: 1
+  squat: 1
+  leg_extension: 1
+  curl: 1
+  tricep_extension: 1
+  shoulder_press: 1
+  lat_pulldown: 1
+  bench_press: 1
+  seated_row: 1
+  peck_fly: 1
+
+two:
+  pushup: 1
+  situp: 1
+  toe_raise: 1
+  squat: 1
+  leg_extension: 1
+  curl: 1
+  tricep_extension: 1
+  shoulder_press: 1
+  lat_pulldown: 1
+  bench_press: 1
+  seated_row: 1
+  peck_fly: 1

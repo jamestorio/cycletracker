@@ -1,0 +1,2 @@
+module WeightTrainningsHelper
+end

@@ -1,0 +1,51 @@
+<h1>Listing weight_trainings</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Push up</th>
+      <th>Sit up</th>
+      <th>Toe raise</th>
+      <th>Squat</th>
+      <th>Leg extension</th>
+      <th>Curl</th>
+      <th>Tricep exstension</th>
+      <th>Should press</th>
+      <th>Lat pulldown</th>
+      <th>Bench press</th>
+      <th>Seated row</th>
+      <th>Peck fly</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weight_trainings.each do |weight_training| %>
+      <tr>
+        <td><%= weight_training.date %></td>
+        <td><%= weight_training.push_up %></td>
+        <td><%= weight_training.sit_up %></td>
+        <td><%= weight_training.toe_raise %></td>
+        <td><%= weight_training.squat %></td>
+        <td><%= weight_training.leg_extension %></td>
+        <td><%= weight_training.curl %></td>
+        <td><%= weight_training.tricep_exstension %></td>
+        <td><%= weight_training.should_press %></td>
+        <td><%= weight_training.lat_pulldown %></td>
+        <td><%= weight_training.bench_press %></td>
+        <td><%= weight_training.seated_row %></td>
+        <td><%= weight_training.peck_fly %></td>
+        <td><%= link_to 'Show', weight_training %></td>
+        <td><%= link_to 'Edit', edit_weight_training_path(weight_training) %></td>
+        <td><%= link_to 'Destroy', weight_training, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weight training', new_weight_training_path %>

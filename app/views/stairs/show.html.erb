@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @stair.Date %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @stair.duration %>
+</p>
+
+<%= link_to 'Edit', edit_stair_path(@stair) %> |
+<%= link_to 'Back', stairs_path %>

@@ -1,0 +1,12 @@
+<%= simple_form_for(@stair) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :Date %>
+    <%= f.input :duration %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,4 +1,12 @@
 CycleTracker::Application.routes.draw do
+  resources :weight_trainings
+
+  resources :strength_trainings
+
+  resources :weight_trainnings
+
+  resources :stairs
+
   devise_for :users
   resources :rides
   
