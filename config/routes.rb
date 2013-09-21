@@ -1,4 +1,10 @@
 CycleTracker::Application.routes.draw do
+  resources :biometrics
+
+  resources :moods
+
+  resources :sleeps
+
   resources :weight_trainings
 
   resources :strength_trainings

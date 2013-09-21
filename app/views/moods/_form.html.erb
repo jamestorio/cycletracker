@@ -1,0 +1,13 @@
+<%= simple_form_for(@mood) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :date %>
+    <%= f.input :feeling %>
+    <%= f.input :note %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

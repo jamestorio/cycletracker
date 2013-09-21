@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @mood.date %>
+</p>
+
+<p>
+  <strong>Feeling:</strong>
+  <%= @mood.feeling %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @mood.note %>
+</p>
+
+<%= link_to 'Edit', edit_mood_path(@mood) %> |
+<%= link_to 'Back', moods_path %>

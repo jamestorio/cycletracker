@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @biometric.date %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @biometric.weight %>
+</p>
+
+<p>
+  <strong>Bmi:</strong>
+  <%= @biometric.bmi %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @biometric.note %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @biometric.time %>
+</p>
+
+<%= link_to 'Edit', edit_biometric_path(@biometric) %> |
+<%= link_to 'Back', biometrics_path %>

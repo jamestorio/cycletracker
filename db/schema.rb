@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921005956) do
+ActiveRecord::Schema.define(version: 20130921103336) do
+
+  create_table "biometrics", force: true do |t|
+    t.date     "date"
+    t.decimal  "weight"
+    t.decimal  "bmi"
+    t.text     "note"
+    t.time     "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "moods", force: true do |t|
+    t.date     "date"
+    t.string   "feeling"
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "recents", force: true do |t|
     t.string   "ride"
@@ -34,6 +52,13 @@ ActiveRecord::Schema.define(version: 20130921005956) do
   create_table "rides", force: true do |t|
     t.string   "name"
     t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sleeps", force: true do |t|
+    t.date     "date"
+    t.time     "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,15 @@
+<%= simple_form_for(@biometric) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :date %>
+    <%= f.input :weight %>
+    <%= f.input :bmi %>
+    <%= f.input :note %>
+    <%= f.input :time %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

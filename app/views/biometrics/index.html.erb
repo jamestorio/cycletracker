@@ -1,0 +1,35 @@
+<h1>Listing biometrics</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>Bmi</th>
+      <th>Note</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @biometrics.each do |biometric| %>
+      <tr>
+        <td><%= biometric.date %></td>
+        <td><%= biometric.weight %></td>
+        <td><%= biometric.bmi %></td>
+        <td><%= biometric.note %></td>
+        <td><%= biometric.time %></td>
+        <td><%= link_to 'Show', biometric %></td>
+        <td><%= link_to 'Edit', edit_biometric_path(biometric) %></td>
+        <td><%= link_to 'Destroy', biometric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Biometric', new_biometric_path %>
