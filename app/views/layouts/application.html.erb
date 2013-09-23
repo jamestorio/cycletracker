@@ -30,14 +30,14 @@
 		<%= current_user.email %> 
 		</p>
 	
-		<button class="btn"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
+		<button class="btn btn-warning"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
 	<% else %>
 	<button class="btn"><%= link_to "Log in", new_user_session_path %></button>
 	<%end%>
 	
 <div class="container">
 	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	<!--<p class="alert"><%= alert %></p>-->
 	<%= yield %>
 </div>
 
