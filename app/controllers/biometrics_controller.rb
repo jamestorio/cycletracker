@@ -1,3 +1,4 @@
+
 class BiometricsController < ApplicationController
   before_action :set_biometric, only: [:show, :edit, :update, :destroy]
 
@@ -72,3 +73,4 @@ class BiometricsController < ApplicationController
       params.require(:biometric).permit(:date, :weight, :bmi, :note, :time)
     end
 end
+

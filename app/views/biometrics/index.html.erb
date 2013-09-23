@@ -1,4 +1,4 @@
-<h1>Listing biometrics</h1>
+<h1>Biometric</h1>
 
 <table class="table">
   <thead>
@@ -22,9 +22,9 @@
         <td><%= biometric.bmi %></td>
         <td><%= biometric.note %></td>
         <td><%= biometric.time %></td>
-        <td><%= link_to 'Show', biometric %></td>
+        <td><%= link_to 'Show', biometric_path(biometric) %></td>
         <td><%= link_to 'Edit', edit_biometric_path(biometric) %></td>
-        <td><%= link_to 'Destroy', biometric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', biometric_path(biometric), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

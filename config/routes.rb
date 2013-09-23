@@ -1,4 +1,5 @@
 CycleTracker::Application.routes.draw do
+  
   resources :biometrics
 
   resources :moods
@@ -13,11 +14,11 @@ CycleTracker::Application.routes.draw do
 
   resources :stairs
 
-  devise_for :users
   resources :rides
   
-
   resources :recents
+
+ devise_for :users
   root to: 'recents#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
