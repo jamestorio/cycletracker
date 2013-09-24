@@ -5,6 +5,8 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+
 gem 'devise'
 gem 'simple_form'
 
@@ -39,8 +41,8 @@ end
 gem 'bootstrap-sass', '~> 2.3.2.1'
 
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+gem 'pg', '0.15.1'
+gem 'rails_12factor', '0.0.2'
 end
 
 # Use ActiveModel has_secure_password
