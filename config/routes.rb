@@ -1,5 +1,6 @@
 CycleTracker::Application.routes.draw do
   
+  get "welcome/index"
   resources :biometrics
 
   resources :moods
@@ -19,7 +20,7 @@ CycleTracker::Application.routes.draw do
   resources :recents
 
  devise_for :users
-  root to: 'recents#index'
+  root to: 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
