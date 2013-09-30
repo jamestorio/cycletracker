@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921103336) do
+ActiveRecord::Schema.define(version: 20130930163157) do
 
   create_table "biometrics", force: true do |t|
     t.date     "date"
@@ -19,6 +19,22 @@ ActiveRecord::Schema.define(version: 20130921103336) do
     t.decimal  "bmi"
     t.text     "note"
     t.time     "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exercise_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exercises", force: true do |t|
+    t.integer  "sets"
+    t.integer  "reps"
+    t.integer  "weight"
+    t.integer  "exercise_type_id"
+    t.integer  "routine_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,6 +68,11 @@ ActiveRecord::Schema.define(version: 20130921103336) do
   create_table "rides", force: true do |t|
     t.string   "name"
     t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "routines", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
