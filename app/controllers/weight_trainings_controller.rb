@@ -15,6 +15,7 @@ class WeightTrainingsController < ApplicationController
   # GET /weight_trainings/new
   def new
     @weight_training = WeightTraining.new
+    @exercise_types = ExerciseType.all
   end
 
   # GET /weight_trainings/1/edit

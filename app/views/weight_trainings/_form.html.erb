@@ -3,18 +3,9 @@
 
   <div class="inputs">
     <%= f.input :date %>
-    <%= f.input :push_up %>
-    <%= f.input :sit_up %>
-    <%= f.input :toe_raise %>
-    <%= f.input :squat %>
-    <%= f.input :leg_extension %>
-    <%= f.input :curl %>
-    <%= f.input :tricep_exstension %>
-    <%= f.input :should_press %>
-    <%= f.input :lat_pulldown %>
-    <%= f.input :bench_press %>
-    <%= f.input :seated_row %>
-    <%= f.input :peck_fly %>
+    <% @exercise_types.each do |exercise_type| %>
+	  <%= f.input exercise_type.name %>
+	<% end %>
   </div>
 
   <div class="actions">
