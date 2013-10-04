@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20130930163157) do
     t.integer  "sets"
     t.integer  "reps"
     t.integer  "weight"
-    t.integer  "exercise_type_id"
+    t.string   "exercise_type"
     t.integer  "routine_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20130930163157) do
   end
 
   create_table "routines", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -4,7 +4,7 @@ class CreateExercises < ActiveRecord::Migration
       t.integer :sets
       t.integer :reps
       t.integer :weight
-      t.integer :exercise_type_id
+      t.string :exercise_type
       t.integer :routine_id
 
       t.timestamps
